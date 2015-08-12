@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<word_dict>
+	<column index="1" type="int"></column>
+	<column index="2" type="char *"></column>
+	<column index="3" type="uint64_t"></column>
+	<column index="4" type="int[]"></column>
+	<column index="5" type="float"></column>
+	<column index="6" type="uint32_t"></column>
+</word_dict>

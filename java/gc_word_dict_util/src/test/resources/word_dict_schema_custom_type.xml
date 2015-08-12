@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<word_dict>
+	<column index="1" type="int"></column>
+	<column index="2" type="com.baidu.fengchao.wgz.DemoCustomType"></column>
+</word_dict>
