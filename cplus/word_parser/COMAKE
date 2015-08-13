@@ -1,0 +1,34 @@
+#edit-mode: -*- python -*-
+#coding:gbk
+
+WORKROOT("../../../../../")
+
+CopyUsingHardLink(True)
+
+CPPFLAGS('-D_GNU_SOURCE -D__STDC_LIMIT_MACROS')
+
+CPPFLAGS('-DUBFLAG_CVSTAG=\"\\\"`svn info 2>/dev/null|grep \"Last Changed Rev\"`\\\"\"')
+CPPFLAGS('-DUBFLAG_BUILD_DATE=\"\\\"`date +\'%Y/%m/%d %H:%M:%S\'`\\\"\"')
+CPPFLAGS('-DUBFLAG_PROJECT=\"\\\"echo_client\\\"\"')
+CPPFLAGS('-DUBFLAG_VERSION=\"\\\"1.0.0.0\\\"\"')
+
+CFLAGS('-g -pipe -W -Wall')
+
+CXXFLAGS('-g -pipe -W -Wall')
+
+IDLFLAGS('--compack')
+
+UBRPCFLAGS('--compack')
+
+LDFLAGS('-lpthread -lcrypto -lrt')
+
+INCPATHS('. ./include')
+
+ImportConfigsFrom("../../../../../third-64/boost/")
+CONFIGS('third-64/boost@base')
+CONFIGS('third-64/gtest@base');
+
+
+Application( 'wordparser', Sources(GLOB("src/*.cpp")))
+Application( 'wordparser_test', Sources(GLOB("src/*.cpp test/*.cpp")))
+

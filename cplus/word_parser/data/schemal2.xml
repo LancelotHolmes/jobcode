@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dict_meta>
+    <columns>
+        <column>
+            <col_num>1</col_num>
+            <type>int</type>
+            <is_array>false</is_array>
+        </column>
+        <column>
+            <col_num>2</col_num>
+            <type>char *</type>
+            <is_array>false</is_array>
+        </column>
+        <column>
+            <col_num>3</col_num>
+            <type>int</type>
+            <is_array>true</is_array>
+        </column>
+    </columns>
+</dict_meta>
